@@ -7,7 +7,8 @@ nmr_h = st.text_area("Введите текстовое описание 1Н-Я�
 if st.button("Посчитать сумму протонов"):
     nmr_h = nmr_h.replace('\n', ' ')
     nmr_h_str = nmr_h
-
+    nmr_h = nmr_h.replace(', rotamers)', ')')
+    
     if nmr_h[-1:] in ['.', ';', ',', ':']:
         nmr_h = nmr_h[:-1]
 
